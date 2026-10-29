@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hand-claim-audit"
+version = "0.1.0"
+description = "Offline audit of documentation against Python vision evidence"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.scripts]
+hand-claim-audit = "hand_claim_audit.audit:main"
+
+[tool.setuptools.packages.find]
+include = ["hand_claim_audit*"]
